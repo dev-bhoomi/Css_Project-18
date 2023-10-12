@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.main_loading{
+    width:100vw;
+    height: 100vh;
+    position: relative;
+    background-color: hsl(206,21%,94%);
+    display: grid;
+    place-items: center;
+}
+.center_loading{
+    width:15rem;
+    height: 15rem;
+    position: relative;
+    /* background-color: red; */
+}
+span{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 5rem;
+    height: 5rem;
+    background-color: #1e272e;
+    animation: load 2s linear infinite;
+    box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.34),
+    0 6.7px 5.3px rgba(0,0,0,0.048),0 12.5px 10px rgba(0 22.3px 17.9px rgba(0,0,0,0.72));
+}
+span:nth-child(2){
+    animation-delay: 0.67;
+}
+span:nth-child(3){
+    animation-delay: 1.32;
+}
+@keyframes load {
+    0%{
+        left:0;
+        top:0;
+    }
+    12.5%{
+        top:0;
+        left:50%
+    }
+    
+    25%{
+        top:0;
+        left:50%
+    }
+    37.5%{
+        top:50;
+        left:50%
+    }
+    50%{
+        top:50;
+        left:50%
+    }
+    62.5%{
+        top:0;
+        left:50%
+    }
+    75%{
+        top:0;
+        left:50%
+    }
+    87.5%{
+        top:0;
+        left:0%
+    }
+    100%{
+        left:0;
+        top:0;
+    }
+}
